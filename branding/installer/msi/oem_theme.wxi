@@ -1,0 +1,21 @@
+<Include>
+  <?define ProductVersion = "!(bind.FileVersion.FILE_owncloud.exe)"?> <!-- For Testing Purposes -->
+
+  <!-- FIXME -->
+  <?define ProductUpgradeCode = "bbfcfeef-c883-4987-a077-cf81dfaa8044" ?>
+
+  <?define ProductName = "STACK sync client" ?>
+  <?define ProductShortName = "STACK" ?>
+  <?define ProductVendor = "TransIP" ?>
+  <?define ProductManufacturer = "TransIP" ?>
+  
+  
+  <?define ProductHelpLink = "https://transip.nl/stack" ?>
+  
+  
+  <?define ExecutableName = "stack" ?>
+  <?define ProductVirtualFileSuffix = "stack" ?>
+  <?define ProductVirtualFileFileclass = "stack.stack_virtual" ?>
+
+  <?define IncludeCrashReporter = 0 ?>
+</Include>

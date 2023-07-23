@@ -4,13 +4,16 @@ ARG C_FLAGS="-Ofast -march=native \
 	-flto -fno-signed-zeros \
 	-fno-trapping-math -funroll-loops \
 	-D_GLIBCXX_PARALLEL"
+RUN dnf upgrade -y
 RUN dnf install -y \
 	cmake \
 	extra-cmake-modules \
 	gcc \
 	ninja-build \
-	qt5ct \
-	qtkeychain-qt5
+	qt5-qtbase-devel \
+	qtkeychain-qt5-devel \
+	sqlite-devel \
+	zlib-devel
 RUN useradd -m workuser
 
 USER workuser

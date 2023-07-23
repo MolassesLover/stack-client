@@ -1,0 +1,33 @@
+app-id: nl.transip.StackClient
+runtime: org.freedesktop.Platform
+runtime-version: "22.08"
+sdk: org.freedesktop.Sdk
+command: stack
+rename-appdata-file: nl.transip.StackClient.appdata.xml
+rename-desktop-file: nl.transip.StackClient.desktop
+rename-icon: stack
+copy-icon: true
+finish-args:
+  - "--socket=x11"
+  - "--device=all"
+  - "--share=network"
+cleanup:
+  - "/include"
+  - "/lib/pkgconfig"
+  - "/share/aclocal"
+  - "/share/gtk-doc"
+  - "/share/man"
+  - "*.la"
+  - "*.a"
+
+modules:
+  - name: stack-client
+    buildsystem: cmake-ninja
+    config-opts:
+      - "-D BUILD_SHELL_INTEGRATION=OFF"
+      - "-D BUILD_SHELL_INTEGRATION_DOLPHIN=OFF"
+      - "-D BUILD_SHELL_INTEGRATION_ICONS=OFF"
+      - "-D BUILD_SHELL_INTEGRATION_NAUTILUS=OFF"
+    sources:
+      - type: git
+        url: https://github.com/MolassesLover/stack-client.git

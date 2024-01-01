@@ -34,6 +34,7 @@
 [Bb]uild
 [Bb]in
 [Tt]arget
+[Rr]esult
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
